@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #222;
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 24px;
+    }
+    h1 { margin-bottom: 24px; }
+    .board {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .column {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.06);
+    }
+    .column h2 { margin-top: 0; }
+    .item {
+      padding: 14px;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fafafa;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 20px;
+      background: #222;
+      color: white;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 700px) {
+      .board { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Meu Workspace</h1>
+
+    <section class="board">
+      <div class="column">
+        <h2>Tarefas</h2>
+        <div class="item">
+          <span class="tag">Tarefa</span>
+          <div>Corrigir botão de login</div>
+        </div>
+        <div class="item">
+          <span class="tag">Tarefa</span>
+          <div>Atualizar documentação</div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2>Features</h2>
+        <div class="item">
+          <span class="tag">Feature</span>
+          <div>Criar sistema de notificações</div>
+        </div>
+        <div class="item">
+          <span class="tag">Feature</span>
+          <div>Criar dashboard de projetos</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
